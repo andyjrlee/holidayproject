@@ -18,7 +18,7 @@ import com.natwest.demo.holidayproject.domain.Cities;
 import com.natwest.demo.holidayproject.service.CitiesService;
 
 @RestController 
-@RequestMapping("/cities") // http://localhost:9002/cities/..
+@RequestMapping("/cities") // http://localhost:3306/cities/..
 public class CitiesController {
 	
 	@Autowired
@@ -65,7 +65,4 @@ public class CitiesController {
 	public ResponseEntity<List<Cities>> findByName(@PathVariable String name){
 		return new ResponseEntity<List<Cities>>(this.service.readByName(name), HttpStatus.OK);
 	}
-}
-
-
 }

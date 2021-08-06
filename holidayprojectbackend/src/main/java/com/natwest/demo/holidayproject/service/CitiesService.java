@@ -6,7 +6,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.natwest.demo.customquery.domain.Student;
 import com.natwest.demo.holidayproject.domain.Cities;
 import com.natwest.demo.holidayproject.repo.CitiesRepo;
 
@@ -33,7 +32,7 @@ public class CitiesService {
 		public Cities readById(Long id) {
 			final Cities FOUND = this.repo.findById(id).orElseThrow(() -> {
 				return new ResponseStatusException(HttpStatus.NOT_FOUND,
-						String.format("No Student found with id: %d ", id));
+						String.format("No City found with id: %d ", id));
 
 			});
 			return FOUND;
@@ -42,12 +41,11 @@ public class CitiesService {
 
 		// update
 		public Cities update(Long id, Cities cities) {
-			// First_Name, Last_Name, Age, Email
 			Cities existing = this.repo.getById(id);
-			existing.setcity(cities.getcity());
-			existing.setregion(cities.getregion());
-			existing.setcountry(cities.getcountry());
-			existing.setpopulation(cities.getpopulation());
+			existing.setCity(cities.getCity());
+			existing.setRegion(cities.getRegion());
+			existing.setCountry(cities.getCountry());
+			existing.setPopulation(cities.getPopulation());
 			Cities updated = this.repo.save(existing);
 			return updated;
 
@@ -64,7 +62,3 @@ public class CitiesService {
 			return this.repo.findByName(name);
 		}
 	}
-
-	
-
-}
