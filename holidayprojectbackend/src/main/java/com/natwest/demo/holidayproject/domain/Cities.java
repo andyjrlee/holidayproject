@@ -23,8 +23,6 @@ public class Cities {
     private int population;
     private String recommendedHotel; 
     private double hotelPrice;
-	
-   
     
     public Cities() {
 		super();

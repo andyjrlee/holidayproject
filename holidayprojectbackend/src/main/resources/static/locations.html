@@ -1,3 +1,7 @@
+<?php 
+  include_once 'includes/database.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,8 +49,43 @@
           </div>
         </div>
       </nav>
-      
-      <div class="container-fluid"
-    <h1> lskdflks</h1>
+
+      <div class="container-fluid">
+    <h1 id="center">Top 10 locations to visit as recommended by our team </h1>
+</div>
+
+<?php 
+    $sql = "SELECT * FROM cities;";
+    $result = mysqli_query($conn, $sql);
+    $resultCheck = mysqli_num_rows($result);
+
+    if ($resultCheck > 0 ){
+        while($row = mysqli_fetch_assoc($result)) {
+          echo $row['cities_city'];
+        }
+    }
+?>
+<div class="container-fluid"> 
+    <p1> Number 1. - </p1></br>
+</br>
+    <p1> Number 2. - </p1></br>
+</br>
+    <p1> Number 3. - </p1></br>
+</br>
+    <p1> Number 4. - </p1></br>
+</br>
+    <p1> Number 5. - </p1></br>
+</br>
+    <p1> Number 6. - </p1></br>
+</br>
+    <p1> Number 7. - </p1></br>
+</br>
+    <p1> Number 8. - </p1></br>
+</br>
+    <p1> Number 9. - </p1></br>
+</br>
+    <p1> Number 10. - </p1></br>
+</br>
+
 </body>
 </html>
