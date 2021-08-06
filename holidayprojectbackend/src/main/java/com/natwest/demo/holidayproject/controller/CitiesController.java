@@ -18,7 +18,7 @@ import com.natwest.demo.holidayproject.domain.Cities;
 import com.natwest.demo.holidayproject.service.CitiesService;
 
 @RestController 
-@RequestMapping("/cities") // http://localhost:3306/cities/..
+@RequestMapping("/cities") // http://localhost:9002/cities/..
 public class CitiesController {
 	
 	@Autowired

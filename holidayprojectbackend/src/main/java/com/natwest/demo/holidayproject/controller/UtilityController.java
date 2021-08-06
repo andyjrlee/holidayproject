@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller 
 public class UtilityController {
 	
-	@GetMapping("/home")
+	@GetMapping("/cities")
 	public String home() {
-		return "homepage";
+		return "location";
 	}
 
 }
