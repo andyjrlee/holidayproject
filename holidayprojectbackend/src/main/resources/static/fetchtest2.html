@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class ="container-fluid">
+
+        <h1>City Data</h1>
+
+    </div>
+    
+ <p> id: <span id = "id"></span><br />
+    city: <span id = "city"></span><br />
+    region: <span id = "region"></span><br />
+    recommended_hotel: <span id = "recommended_hotel"></span>
+</p>
+<script>
+    // const api_url = 'https://api.wheretheiss.at/v1/satellites/25544'
+    const api_url = 'http://127.0.0.1:8080/cities/read/1'
+    async function getABC() {
+        const response = await fetch(api_url);
+        const data = await response.json();
+        const { id, city, region, recommended_hotel } = data;
+
+        document.getElementById('id').textContent = id;
+        document.getElementById('city').textContent = city;
+        document.getElementById('region').textContent = region;
+        document.getElementById('recommended_hotel').textContent = recommended_hotel;
+        
+        console.log(id);
+        console.log(city);
+        console.log(region);
+        console.log(recommended_hotel);
+    }
+
+    getABC();
+
+</script>
+
+
+<script src="/holidayprojectbackend/src/main/resources/static/fetchtest2.js"></script>
+</body>
+</html>
