@@ -8,7 +8,7 @@ public class UtilityController {
 	
 	@GetMapping("/cities")
 	public String home() {
-		return "location";
+		return "home";
 	}
 
 }
