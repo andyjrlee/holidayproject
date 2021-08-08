@@ -21,14 +21,14 @@ public class Cities {
     private String region;
     private String country;
     private int population;
-    private String recommendedHotel; 
+    private String hotel; 
     private double hotelPrice;
     
     public Cities() {
 		super();
 	}
 
-	public Cities(long id, String city, String region, String country, int population, String recommendedHotel,
+	public Cities(long id, String city, String region, String country, int population, String hotel,
 			double hotelPrice) {
 		super();
 		this.id = id;
@@ -36,19 +36,19 @@ public class Cities {
 		this.region = region;
 		this.country = country;
 		this.population = population;
-		this.recommendedHotel = recommendedHotel;
+		this.hotel = hotel;
 		this.hotelPrice = hotelPrice;
 	}
 
 
-	public Cities(String city, String region, String country, int population, String recommendedHotel,
+	public Cities(String city, String region, String country, int population, String hotel,
 			double hotelPrice) {
 		super();
 		this.city = city;
 		this.region = region;
 		this.country = country;
 		this.population = population;
-		this.recommendedHotel = recommendedHotel;
+		this.hotel = hotel;
 		this.hotelPrice = hotelPrice;
 	}
 
@@ -93,11 +93,11 @@ public class Cities {
 	}
 
 	private String getRecommendedHotel() {
-		return recommendedHotel;
+		return hotel;
 	}
 
-	private void setRecommendedHotel(String recommendedHotel) {
-		this.recommendedHotel = recommendedHotel;
+	private void setRecommendedHotel(String hotel) {
+		this.hotel = hotel;
 	}
 
 	private double getHotelPrice() {
@@ -110,7 +110,7 @@ public class Cities {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(city, country, hotelPrice, id, population, recommendedHotel, region);
+		return Objects.hash(city, country, hotelPrice, id, population, hotel, region);
 	}
 
 	@Override
@@ -124,7 +124,7 @@ public class Cities {
 		Cities other = (Cities) obj;
 		return Objects.equals(city, other.city) && Objects.equals(country, other.country)
 				&& Double.doubleToLongBits(hotelPrice) == Double.doubleToLongBits(other.hotelPrice) && id == other.id
-				&& population == other.population && Objects.equals(recommendedHotel, other.recommendedHotel)
+				&& population == other.population && Objects.equals(hotel, other.hotel)
 				&& Objects.equals(region, other.region);
 	}
     
