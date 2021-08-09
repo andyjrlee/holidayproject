@@ -1,0 +1,10 @@
+body {
+    background-color: #06faee;
+    opacity: 0.8
+
+    background-image: url('/holidayprojectbackend/src/main/resources/static/beach.jpg');
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+
+  }
