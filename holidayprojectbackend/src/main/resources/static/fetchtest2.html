@@ -2,46 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <div class ="container-fluid">
-
-        <h1>City Data</h1>
-
-    </div>
-    
- <p> city: <span id = "city"></span><br />
-    region: <span id = "region"></span><br />
-    country: <span id = "country"></span><br />
-    population: <span id = "population"></span>
+        <h1 text-align='center'>City Data</h1><br />   
+ <p> City: <span id = "city"></span><br />
+    Region: <span id = "region"></span><br />
+    Country: <span id = "country"></span><br />
+    Population: <span id = "population"></span>
 </p>
-<script>
-    // const api_url = 'https://api.wheretheiss.at/v1/satellites/25544'
-    const api_url = 'http://127.0.0.1:8080/cities/read'
-    async function getABC() {
-        const response = await fetch(api_url);
-        const data = await response.json();
-        const { city, region, country, population } = data;
+</div>
 
-        document.getElementById('city').textContent = city;
-        document.getElementById('region').textContent = region;
-        document.getElementById('country').textContent = country;
-        document.getElementById('population').textContent = population;
-        
-        console.log(city);
-        console.log(region);
-        console.log(country);
-        console.log(population);
-    }
-
-    getABC();
-    // setInterval(getABC, 3000);
-
-</script>
-
+<script> 
+    </script>
 
 <script src="/holidayprojectbackend/src/main/resources/static/fetchtest2.js"></script>
 </body>

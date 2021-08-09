@@ -20,10 +20,10 @@
                 <a class="nav-link active" aria-current="page" href="/holidayprojectbackend/src/main/resources/static/homepage.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/holidayprojectfrontend/HTML/locations.html">Locations</a>
+                <a class="nav-link" href="/holidayprojectbackend/src/main/resources/static/locations.html">Locations</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/holidayprojectbackend/src/main/resources/static//recommend.html">
                   Recommend a City
                 </a>
               </li>
@@ -38,5 +38,25 @@
           </div>
         </div>
       </nav>
+
+   
+
+    <form action="http://127.0.0.1:8080/cities/create" method="post">
+        <h1> Sign Up </h1>
+        <fieldset>
+            <legend><span class="number">1</span> Your Favourite City</legend>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+            <br>
+            <label for="region">Region:</label>
+            <input type="text" id="region" name="region">
+            <br>
+            <label for="country">Country:</label>
+            <input type="text" id="country"       name="country">
+            <br>
+           
+        </fieldset>
+        <button type="submit">Sign Up</button>
+    </form>
 </body>
 </html>
