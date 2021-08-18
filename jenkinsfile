@@ -3,7 +3,7 @@ pipeline {
 	stages {
 		stage('Clone Repo'){
 			steps{
-			sh 'git clone https://github.com/andyjrlee/holidayproject.git'
+			sh 'git fetch https://github.com/andyjrlee/holidayproject.git'
 			}
 		}
 		stage('Build Jar') {
