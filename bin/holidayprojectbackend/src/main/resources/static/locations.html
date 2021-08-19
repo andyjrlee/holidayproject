@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="shortcut icon" href="pictures/favicon2.ico">
+    <title>Top 5 Cities</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/holidayprojectbackend/src/main/resources/static/homepage.html">Holidays for You!</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/holidayprojectbackend/src/main/resources/static/homepage.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/holidayprojectbackend/src/main/resources/static/locations.html">Locations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/holidayprojectbackend/src/main/resources/static/recommend.html">
+                  Recommend a City
+                </a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container" text-align="center">
+    <h2 >Top 3 locations to visit as recommended by our team </h2>
+    </div>
+
+<div class="container">
+  <img src="/holidayprojectbackend/src/main/resources/static/Anglesey-south-stack-sunset-long-ex-1.jpg" class="col-md-6 float-md-end mb-3 ms-md-3" alt="...">
+
+
+    <p1> Number 1. - </p1> </br>City: <span id = "city"></span> <br/> 
+    Region: <span id = "region"></span><br />
+    Country: <span id ="country"></span><br />
+    Population: <span id = "population"></span><br />
+    <form action="https://visitbirmingham.com/">
+      <input type="submit" value="Find our more">
+  </form>
+    <p1> Number 2. - </p1></br>City: <span id = "city2"></span> <br/> 
+    Region: <span id = "region2"></span><br />
+    Country: <span id ="country2"></span><br />
+    Population: <span id = "population2"></span><br />
+    <form action="https://www.visitlondon.com/">
+      <input type="submit" value="Find our more" />
+  </form>
+    <p1> Number 3. - </p1> City: <span id = "city3"></span> <br/> 
+    Region: <span id = "region3"></span><br />
+    Country: <span id ="country3"></span><br />
+    Population: <span id = "population3"></span>
+    <form action="https://www.visitliverpool.com/">
+      <input type="submit" value="Find our more" />
+  </form>
+    </div>
+<script src="/holidayprojectbackend/src/main/resources/static/location.js"></script>
+<script src="/holidayprojectbackend/src/main/resources/static/location2.js"></script>
+<script src="/holidayprojectbackend/src/main/resources/static/locations3.js"></script>
+<!-- <script src="/holidayprojectbackend/src/main/resources/static/locations4.js"></script>
+<script src="/holidayprojectbackend/src/main/resources/static/locations5.js"></script> -->
+</body>
+</html>
