@@ -1,5 +1,5 @@
 #!/bin/bash
-service=CitiesService.service
+service=myApp.service
 
 if (( $(ps -ef | grep -v grep | grep $service | wc -l) > 0 ))
 then

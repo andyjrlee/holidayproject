@@ -12,16 +12,16 @@ pipeline {
 			sh 'mv ./target/surefire-reports/*.txt /home/jenkins/Tests/${BUILD_NUMBER}_tests/'
 			}
 		}
-		stage('Build War'){
+		stage('Build Jar'){
 			steps{
 			sh 'mvn clean package'
 			}
 		}
-		stage('Moving War'){
+		stage('Moving Jar'){
 			steps{
-			sh 'mkdir -p /home/jenkins/Wars'
+			sh 'mkdir -p /home/jenkins/Jars'
 			sh 'mkdir -p /home/jenkins/appservice'
-			sh 'mv ./target/*.war /home/jenkins/Wars/project_war.war'
+			sh 'mv ./target/*.jar /home/jenkins/Jars/project_Jar.jar'
 			}
                 }
 		stage('Stopping Service'){
@@ -32,7 +32,7 @@ pipeline {
 		stage('Create new service file'){
 			steps{
 			sh ''' echo '#!/bin/bash
-sudo java -jar /home/jenkins/Wars/project_war.war' > /home/jenkins/appservice/start.sh
+sudo java -jar /home/jenkins/Jars/project_jar.jar' > /home/jenkins/appservice/start.sh
 sudo chmod +x /home/jenkins/appservice/start.sh'''
 			sh '''echo '[Unit]
 Description=My SpringBoot App
