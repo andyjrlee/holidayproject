@@ -1,6 +1,8 @@
 "use strict";
 
-const api_cities = 'http://localhost:8080/cities/read/3'
+const deleteUrl = 'http://localhost:8080/cities/delete/';
+
+const api_cities = 'http://localhost:8080/cities/read/3';
     async function getCity() {
         const response = await fetch(api_cities);
         const data = await response.json();
@@ -16,6 +18,33 @@ const api_cities = 'http://localhost:8080/cities/read/3'
         console.log(country);
         console.log(population);
     }
+    const deleteCity = () => {
+        const editAssigneeId = _editAssigneeSelect.value;
+    
+        fetch(`${deleteUrl}/delete/${editAssigneeId}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then(response => console.log(response))
+            .then(() => {
+                console.log("Delete successful");
+                refresh();
+            })
+            .catch(err => console.error(`error ${err}`));
+    };
+    // const deleteTask = (taskId) => {
+    //     fetch(`${taskUrl}/delete/${taskId}`, {
+    //         method: "DELETE",
+    //         headers: {
+    //             "Content-Type": "application/json"
+    //         }
+    //     })
+    //         .then(response => console.log(response))
+    //         .then(() => readAllTasks())
+    //         .catch(err => console.error(`error ${err}`));
+    // };
 
     getCity();
 
