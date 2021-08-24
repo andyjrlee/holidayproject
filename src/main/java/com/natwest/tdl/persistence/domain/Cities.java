@@ -1,4 +1,4 @@
-package com.natwest.demo.holidayproject.domain;
+package com.natwest.tdl.persistence.domain;
 
 import java.util.Objects;
 

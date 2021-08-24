@@ -1,4 +1,4 @@
-package com.natwest.demo.holidayproject.controller;
+package com.natwest.tdl.rest;
 
 import java.util.List;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.natwest.demo.holidayproject.domain.Cities;
-import com.natwest.demo.holidayproject.service.CitiesService;
+import com.natwest.tdl.persistence.domain.Cities;
+import com.natwest.tdl.services.CitiesService;
 
 @RestController 
 @RequestMapping("/cities") // http://localhost:8080/cities/..

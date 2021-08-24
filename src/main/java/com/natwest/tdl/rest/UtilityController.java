@@ -1,4 +1,4 @@
-package com.natwest.demo.holidayproject.controller;
+package com.natwest.tdl.rest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

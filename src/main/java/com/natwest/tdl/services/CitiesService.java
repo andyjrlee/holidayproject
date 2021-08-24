@@ -1,4 +1,4 @@
-package com.natwest.demo.holidayproject.service;
+package com.natwest.tdl.services;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
-import com.natwest.demo.holidayproject.domain.Cities;
-import com.natwest.demo.holidayproject.repo.CitiesRepo;
+import com.natwest.tdl.persistence.domain.Cities;
+import com.natwest.tdl.persistence.repos.CitiesRepo;
 
 @Service
 public class CitiesService {

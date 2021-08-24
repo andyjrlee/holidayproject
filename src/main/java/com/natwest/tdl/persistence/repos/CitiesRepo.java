@@ -1,4 +1,4 @@
-package com.natwest.demo.holidayproject.repo;
+package com.natwest.tdl.persistence.repos;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.natwest.demo.holidayproject.domain.Cities;
+import com.natwest.tdl.persistence.domain.Cities;
 
 @Repository
 public interface CitiesRepo extends JpaRepository<Cities, Long>{

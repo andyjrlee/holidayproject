@@ -1,6 +1,6 @@
 "use strict";
 
-const api_cities = 'http://127.0.0.1:8080/cities/read/1'
+const api_cities = 'http://holidayproject.ce3qdigthphh.eu-west-1.rds.amazonaws.com:8080/cities/read/1'
     async function getCity() {
         const response = await fetch(api_cities);
         const data = await response.json();

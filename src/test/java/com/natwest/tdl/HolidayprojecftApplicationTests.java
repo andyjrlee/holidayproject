@@ -1,4 +1,4 @@
-package com.natwest.demo.holidayproject.domain;
+package com.natwest.tdl;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
